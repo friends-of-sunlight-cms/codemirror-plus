@@ -1,0 +1,28 @@
+{
+    "$schema": "../../../system/schema/extend.json",
+    "name": "Codemirror Plus",
+    "description": "Syntax highlighter for administration, version enriched with collapse and expand code features.",
+    "authors": [
+        {"name":"Friends of Sunlight CMS", "url": "https://github.com/friends-of-sunlight.cms"}
+    ],
+    "version": "1.0.0",
+    "environment": {
+        "system": "^8.1"
+    },
+    "events.admin": [
+        {"event": "admin.editor", "script": "event/admin_editor.php"},
+        {"event": "admin.head", "script": "event/admin_head.php", "group": "codemirror"},
+        {"event": "admin.style", "script": "event/admin_style.php"}
+    ],
+    "extra": {
+        "supported_formats": {
+            "xml": true,
+            "css": true,
+            "js": true,
+            "json": true,
+            "php": true,
+            "php-raw": true,
+            "html": true
+        }
+    }
+}
